@@ -1,0 +1,211 @@
+.backgrounds {
+
+  li {
+
+    &:nth-child(5) {
+
+      // @include breakpoint($desktop-bp) {
+      //   overflow-y: hidden;
+      // }
+    }
+  }
+
+  &__img {
+    position: absolute;
+
+    &.backgrounds__img--2 {
+
+      @include breakpoint($mobile-bp) {
+        height: 100vh;
+      }
+    }
+
+    &--3 {
+      z-index: 10;
+    }
+
+    &--4 {
+      animation: gray-anim 8s infinite;
+
+      @keyframes gray-anim {
+
+        0% {
+          filter: grayscale(0);
+        }
+
+        20% {
+          filter: grayscale(1);
+        }
+
+        50% {
+          filter: grayscale(0);
+        }
+
+        100% {
+          filter: grayscale(0);
+        }
+      }
+
+      @include breakpoint($desktop-bp) {
+        top: 10%;
+      }
+
+      @include breakpoint($tablet-bp) {
+        top: 0;
+      }
+    }
+
+    &.backgrounds__img--4,
+    &.backgrounds__img--5 {
+
+      @include breakpoint($middle-bp) {
+        display: none;
+      }
+    }
+
+    &.backgrounds__img--4 {
+      left: 10%;
+      top: 3vw;
+      z-index: 11;
+      width: 35vw;
+      height: auto;
+      max-width: 550px;
+      max-height: 550px;
+
+
+      @include breakpoint($desktop-bp) {
+        width: 50vw;
+        left: 0;
+      }
+
+      @include breakpoint($tablet-bp) {
+        width: 45vw;
+        height: 45vw;
+      }
+    }
+
+    &.backgrounds__img--5 {
+      width: 30vw;
+      height: 39vw;
+      left: 12%;
+      top: 17%;
+      z-index: 11;
+
+      @include breakpoint($xxl-bp) {
+        height: auto;
+        width: 40vw;
+      }
+
+      @include breakpoint($desktop-bp) {
+        top: 13%;
+        left: 10%;
+        height: auto;
+        width: 40vw;
+      }
+
+      @include breakpoint($tablet-bp) {
+        left: 15%;
+        width: 44vw;
+        height: 50vw;
+        top: 10%;
+      }
+
+      @include breakpoint($mobile-bp) {
+        left: -28%;
+        min-width: 270px;
+      }
+    }
+
+    &.backgrounds__img--6 {
+      width: 255px;
+      height: 247px;
+      object-fit: contain;
+      left: auto;
+      right: 0;
+      top: 0;
+
+      @include breakpoint($mobile-bp) {
+        top: 46px;
+        width: 200px;
+        height: 190px;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Now the same background, but with brightness filters*/
+  .lightning {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    // background: url('../images/main-bg/lightning-bg.png');
+    background-image: url('../images/main-bg/lightning-bg.webp');
+    /* Firefox - UPDATE: no longer needed in FF 88+! */
+    background-image: -webkit-image-set(url('../images/main-bg/lightning-bg.webp') 1x,
+        url('../images/main-bg/lightning-bg.webp') 1.5x,
+        url('../images/main-bg/lightning-bg.webp') 2x);
+    background-image: image-set(url('../images/main-bg/lightning-bg.jpg') 1x,
+        url('../images/main-bg/lightning-bg.jpg') 1.5x,
+        url('../images/main-bg/lightning-bg.jpg') 2x);
+    /* Safari */
+    background-position: center center;
+    background-origin: content-box;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(3);
+    opacity: 0;
+    transition: filter 0.3s linear, opacity 0.3s linear;
+    // z-index: -1;
+  }
+
+  /*Now just a opacity animation*/
+  .flashit {
+    animation: flash ease-out 6s infinite;
+    animation-delay: 0;
+  }
+
+  @keyframes flash {
+    from {
+      opacity: 0;
+    }
+
+    12% {
+      opacity: 0;
+    }
+
+    13% {
+      opacity: 0.6;
+    }
+
+    14% {
+      opacity: 0.2;
+    }
+
+    16% {
+      opacity: 1;
+    }
+
+    20% {
+      opacity: 0;
+    }
+
+    92% {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  /*End! is that simple! */
+}

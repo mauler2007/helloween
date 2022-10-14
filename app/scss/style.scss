@@ -1,0 +1,19 @@
+@import "global/reset";
+@import "global/vars";
+@import "global/mixins";
+@import "global/global";
+@import "global/fonts";
+@import "global/libs";
+
+
+@import "blocks/_header";
+@import "blocks/_logo";
+@import "blocks/_socials";
+@import "blocks/_page";
+@import "blocks/_btn-boxtop";
+@import "blocks/_popup";
+@import "blocks/_backgrounds";
+@import "blocks/_footer";
+
+@import "components/_switcher";
+@import "components/_img";

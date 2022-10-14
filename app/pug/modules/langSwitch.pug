@@ -1,0 +1,20 @@
+mixin switcher(id,name,state)
+    label.langCheck__item(class=`langCheck__item-${name} ${state}`, for=id)
+        .icon(class=`icon-${name}`)
+        span.langContext=name        
+        input(type="checkbox",id=id, name=id)
+        block
+.langCheck
+    .langCheck__wrapper
+        +switcher('','pt','selected')
+            span.arrow
+        +switcher('ru','ru','active')
+        +switcher('en','en','')
+        +switcher('es','es','')
+        +switcher('fi','fi','')
+        +switcher('de','de','')
+        +switcher('el','el','')
+        +switcher('es','es','')
+        +switcher('fr','fr','')
+        +switcher('no','no','')
+        

@@ -1,0 +1,23 @@
+-
+  var popupName = 'Termos e Condições'
+  var period = ''
+  var popupTexts = [
+    {pupupText: '1. Para celebrar o Halloween, vamos oferecer-lhe um bónus de 200% quando fizer um depósito de, pelo menos, 10 EUR entre as 00:00 e as 23:59 do dia 31.10.2021. O bónus máximo que pode receber é equivalente a 200% do valor do seu depósito, mas não poderá exceder os 100 EUR. Cada cliente terá direito a receber 1 único bónus.'},{pupupText: '2. O bónus só pode ser atribuído se não existirem outras ofertas de bónus ativas na sua conta. '},{pupupText: '3. Os clientes que receberem este bónus não podem receber ou utilizar quaisquer outros bónus para o mesmo depósito. '},{pupupText: '4. A caixa "Participar em ofertas de bónus" em A Minha Conta tem de estar assinalada. '},{pupupText: '5. O bónus será automaticamente creditado logo que tenha feito um depósito, desde que o seu perfil pessoal em A Minha Conta se encontre preenchido na íntegra.'},{pupupText: '6. O bónus só pode ser apostado em eventos desportivos.'},{pupupText: '7. Para que o bónus seja creditado, não é permitido fazer nenhum levantamento antes de fazer um depósito. '},{pupupText: '8. Para desbloquear o bónus, deve apostar três vezes o valor do bónus em apostas de acumulador no prazo de 24 horas após receber o bónus, caso contrário o mesmo será considerado nulo. Cada aposta de acumulador tem de conter, pelo menos, cinco seleções. Três das seleções dentro da aposta de acumulador têm de ter odds de 1.70 ou superiores.'},{pupupText: '9. O bónus pode ser apostado em eventos pré-jogo e ao vivo (as apostas de sistema não são elegíveis). Apostas resolvidas com odds de 1.0 não contribuem para o requisito de apostas do bónus. '},{pupupText: '10. O bónus é considerado como tendo sido apostado apenas depois de terem sido resolvidas todas as apostas para o valor especificado. '},{pupupText: '11. Uma vez desbloqueado o bónus, serão creditados na sua contra principal os fundos remanescentes do bónus, os quais não podem exceder o valor inicial do bónus. Se, depois de desbloqueado, o seu saldo da conta de bónus for inferior ao valor de aposta mínimo, então o bónus é considerado perdido.'},{pupupText: '12. Não podem ser feitos levantamentos antes de todas as condições da oferta terem sido cumpridas.'},{pupupText: '13. O requisito de bónus tem de ser completado na íntegra antes de poder levantar todos os fundos da sua conta, caso contrário, quaisquer bónus ou ganhos posteriores serão anulados.'},{pupupText: '14. Esta promoção não é válida em conjunto com outras promoções.'},{pupupText: '15. Se for detetada qualquer tentativa de abuso desta promoção pela utilização de várias contas, o bónus será removido de todas as contas suspeitas.'},{pupupText: '16. Em caso de qualquer disputa, as decisões tomadas pela Betandyou são finais e vinculativas.'},{pupupText: '17. Os termos e condições da Betandyou aplicam-se a todos os bónus.'},{pupupText: '18. Apenas são elegíveis para esta oferta clientes ativos que fazem transações diárias através das suas contas.'},{pupupText: '19. Esta oferta só está disponível para clientes com os detalhes da conta totalmente preenchidos.'},{pupupText: '20. Estão desativados todos os tipos de bónus para criptomoedas, sem exceções.'}
+  ]
+   
+#popup-modal.popup.modal
+
+  .popup__wrapper
+    .popup__close 
+      span.popup__close-btn
+    
+    .popup__content 
+      h2.popup__name= popupName
+      p.popup__date 
+        time.pupup__time(datetime="2021-10-01T00:01")= period
+      .popup__frame 
+        ul.popup__rules
+          for i in popupTexts  
+            li.popup__rule 
+              p= i.pupupText
+          

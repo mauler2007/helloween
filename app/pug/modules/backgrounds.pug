@@ -1,0 +1,45 @@
+block backgrounds 
+
+  ul.backgrounds
+    |
+    |
+    li 
+      picture
+        //- source(srcset='images/main-bg/lend1.webp',media="(max-width: 576px)")
+        source(srcset='images/main-bg/lend1-576.webp 576w, images/main-bg/lend1.webp' type='image/webp')
+        source(srcset='images/main-bg/lend1.jpg 1x', type='image/jpg' )
+        img.backgrounds__img.backgrounds__img--1(src='images/main-bg/lend1.jpg' ,alt='')
+    |
+    |
+    li 
+      picture
+        source(srcset='images/main-bg/down2-576.webp 576w, images/main-bg/down2.webp' type='image/webp')
+        source(srcset='images/main-bg/down2.png 1px', type='image/png' )
+        img.backgrounds__img.backgrounds__img--2(src='images/main-bg/down2.png' ,alt='')
+    |
+    |
+    li 
+      picture
+        source(srcset='images/main-bg/mouses-mobile-576.webp 576w, images/main-bg/mouses3.webp' type='image/webp')
+        source(srcset='images/main-bg/mouses3.png', type='image/png' )
+        img.backgrounds__img.backgrounds__img--3(src='images/main-bg/mouses3.png' ,alt='')
+    |
+    |
+    li 
+      picture
+        source(srcset='images/main-bg/moon4.png',media="(max-width: 576px)")
+        img.backgrounds__img.backgrounds__img--4(src='images/main-bg/moon4.png' ,alt='')
+    |
+    |
+    li 
+      picture
+        source(srcset='images/main-bg/pumpkin5.png',media="(max-width: 576px)")
+        img.backgrounds__img.backgrounds__img--5.animShowPumpkin(src='images/main-bg/pumpkin5.png' ,alt='')
+    |
+    |
+    li 
+      picture
+        source(srcset='images/main-bg/wing6.png')
+        img.backgrounds__img.backgrounds__img--6(src='images/main-bg/wing6.png' ,alt='')
+      li 
+        .lightning.flashit
